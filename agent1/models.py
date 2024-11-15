@@ -18,6 +18,7 @@ class agentLists(models.Model):
     age = models.IntegerField()
     positions = models.CharField(max_length=30, choices=POSITIONS_TYPES)
     date_added = models.DateTimeField(default=timezone.now)
+    description = models.TextField(default='')
 
 
     def __str__(self):

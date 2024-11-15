@@ -10,5 +10,9 @@ body, html {
     width: 100%;
     background-color: rgb(51, 14, 85);
     color: antiquewhite;
+    /* text-align: center;/ */
+}
+
+h1 {
     text-align: center;
 }

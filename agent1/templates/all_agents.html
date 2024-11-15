@@ -4,10 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'all_agents.css' %}">
     <title>All Agents</title>
 </head>
 <body>
-    <h1>Welcome to our comunity</h1>
+    <section>
+        <header>
+            <h1>All Agents</h1>
+        </header>
+        <div class="hero">
+            {% for agent in agents %}
+            <div class="ag-del">
+                <div class="img">
+                    <img src="{{agent.profile_image.url}}" alt="Agent Photo">
+                </div>
+                <h2> Name: {{agent.name}} </h2>
+                <h2>Age: {{agent.age}} </h2>
+                <h3>Sector: {{agent.positions}} </h3>
+                <h3> {{agent.date_added}} </h3>
+                <a href="{% url 'agent_detail' agent.id %}"><button class="dl-btn">More Detail</button></a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
 </body>
 </html>

@@ -23,5 +23,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('chai/', include('agent1.urls')),
+    path('agents/', include('agent1.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
